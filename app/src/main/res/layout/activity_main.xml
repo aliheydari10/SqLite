@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="3dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:gravity="center"
+        android:hint="نام"
+        android:textColorHint="#78909c" />
+
+    <EditText
+        android:id="@+id/edt_family"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:gravity="center"
+        android:hint="نام خانوادگی"
+        android:textColorHint="#78909c" />
+
+    <EditText
+        android:id="@+id/edt_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/text"
+        android:gravity="center"
+        android:hint="شماره پرسنلی"
+        android:textColorHint="#78909c" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="7dp"
+        android:orientation="horizontal">
+
+
+        <Button
+
+            android:id="@+id/btn_delet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom"
+            android:text="حذف" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom"
+            android:text="بروزرسانی" />
+
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom"
+            android:text="نمایش" />
+
+        <Button
+            android:id="@+id/btn_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom"
+            android:text="ذخیره" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:text="تعداد پرسنل"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/txt_count"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#CFD8DC"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="27sp" />
+
+</LinearLayout>
