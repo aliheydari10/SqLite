@@ -61,12 +61,17 @@ public class MainActivity extends AppCompatActivity {
         View.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
+                String mId = Id.getText().toString();
+                if (TextUtils.isEmpty(mId)) {
 
-                String vID = Id.getText().toString();
-                Person vPer = dbm.getperson(vID);
-                Name.setText(vPer.pName);
-                Family.setText(vPer.pFamily);
+                    Toast.makeText(MainActivity.this, "شماره پرسنلی را وارد کنید", Toast.LENGTH_SHORT).show();
+                } else {
 
+                    String vID = Id.getText().toString();
+                    Person vPer = dbm.getperson(vID);
+                    Name.setText(vPer.pName);
+                    Family.setText(vPer.pFamily);
+                }
             }
         });
 

@@ -36,6 +36,7 @@
         android:layout_margin="10dp"
         android:background="@drawable/text"
         android:gravity="center"
+        android:inputType="number"
         android:hint="شماره پرسنلی"
         android:textColorHint="#78909c" />
 
