@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 uperson.pName = uNAME;
                 uperson.pFamily = uFAMILY;
                 dbm.updateperson(uperson);
+                Toast.makeText(MainActivity.this,"بروزرسانی شد",Toast.LENGTH_SHORT).show();
 
 
             }
