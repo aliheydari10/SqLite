@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <solid
-        android:color="#4fc3f7"
-        ></solid>
+    <gradient
+
+
+        android:centerX="@android:integer/config_shortAnimTime"
+        android:startColor="#71dc97"
+        android:endColor="#57c6ec"
+        android:angle="0"/>
     <corners
-        android:radius="10dp"
+        android:radius="20dp"
         ></corners>
 </shape>

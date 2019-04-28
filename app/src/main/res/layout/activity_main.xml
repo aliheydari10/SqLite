@@ -2,18 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:padding="3dp"
+
     tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="SQ lite"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edt_name"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/text"
         android:gravity="center"
         android:hint="نام"
@@ -22,8 +37,9 @@
     <EditText
         android:id="@+id/edt_family"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/text"
         android:gravity="center"
         android:hint="نام خانوادگی"
@@ -32,26 +48,28 @@
     <EditText
         android:id="@+id/edt_id"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/text"
         android:gravity="center"
+        android:hint="*********"
         android:inputType="number"
-        android:hint="شماره پرسنلی"
         android:textColorHint="#78909c" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
         android:layout_margin="7dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <Button
-
             android:id="@+id/btn_delet"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@drawable/bottom"
@@ -60,16 +78,26 @@
         <Button
             android:id="@+id/btn_update"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@drawable/bottom"
             android:text="بروزرسانی" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <Button
             android:id="@+id/btn_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@drawable/bottom"
@@ -78,30 +106,62 @@
         <Button
             android:id="@+id/btn_insert"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@drawable/bottom"
             android:text="ذخیره" />
     </LinearLayout>
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
 
-    <TextView
-        android:id="@+id/txt_"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
 
-        android:gravity="center"
-        android:text="تعداد پرسنل"
-        android:textColor="#000" />
+        <TextView
+            android:id="@+id/txt_"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
 
-    <TextView
-        android:id="@+id/txt_count"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:background="#CFD8DC"
-        android:gravity="center"
-        android:textColor="#000"
-        android:textSize="27sp" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="تعداد پرسنل"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.629"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_count"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/text"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
 
 </LinearLayout>
